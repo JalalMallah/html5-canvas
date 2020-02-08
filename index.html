@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Canvas</title>
+    <!-- Montserrat Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- My JS -->
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <h1>HTML5 Canvas</h1>
+    <hr />
+    <div class="controls">
+      <p class="line-color">
+        Line color:
+        <span class="color black"></span>
+        <span class="color light-blue"></span>
+        <span class="color red"></span>
+        <span class="color green"></span>
+        <span class="color indigo"></span>
+      </p>
+      <p class="line-thickness">
+        Line thickness:
+        <span class="thickness thin">Thin</span>
+        <span class="thickness medium">Medium</span>
+        <span class="thickness thick">Thick</span>
+      </p>
+      <p>
+        <button class="clear">Clear Canvas</button>
+      </p>
+    </div>
+    <canvas id="draw" width="1000" height="600"></canvas>
+  </body>
+</html>

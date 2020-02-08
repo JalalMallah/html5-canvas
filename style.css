@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  font-family: 'Montserrat';
+  --caribbean-green: #1dd1a1;
+  --hot-red: #ce1010;
+  --sunflower: #f1c40f;
+}
+
+body {
+  background-color: var(--hot-red);
+  color: var(--sunflower);
+}
+
+h1 {
+  padding: 10px;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+hr {
+  border: 0;
+  height: 3px;
+  background-image: linear-gradient(
+    to right,
+    rgba(241, 196, 15, 0),
+    rgba(241, 196, 15, 0.75),
+    rgba(241, 196, 15, 0)
+  );
+}
+
+#draw {
+  display: block;
+  margin: 20px auto;
+  background-color: var(--sunflower);
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.controls {
+  width: 1000px;
+  margin: 20px auto;
+  padding: 10px 20px;
+  /* border: 1px solid var(--sunflower); */
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 2rem;
+}
+
+/* Line Color */
+
+.line-color {
+  display: flex;
+  align-items: center;
+}
+
+.line-color > span.color {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 8px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.color:hover {
+  transform: scale(1.25);
+  box-shadow: 1px 1px 5px #555;
+}
+
+.color.red {
+  background-color: var(--hot-red);
+}
+
+.color.indigo {
+  background-color: indigo;
+}
+
+.color.black {
+  background-color: #000;
+}
+
+.color.green {
+  background-color: forestgreen;
+}
+
+.color.light-blue {
+  background-color: dodgerblue;
+}
+
+/* Line Thickness */
+.thickness {
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.thickness:hover {
+  text-decoration: underline;
+}
+
+/* Clear Canvas Button */
+.clear {
+  position: relative;
+  padding: 5px 10px;
+  border: 1px solid var(--sunflower);
+  /* border-radius: 5px; */
+  font-family: 'Montserrat';
+  font-size: 2rem;
+  color: var(--sunflower);
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.clear::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  right: -1px;
+  background-color: var(--sunflower);
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.clear:hover::before,
+.clear:focus::before {
+  transform: scaleX(1);
+}
+
+.clear:hover,
+.clear.focus {
+  color: var(--hot-red);
+}
